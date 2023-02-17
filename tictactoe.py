@@ -33,12 +33,7 @@ def main():
         if full_board() is True:
             print("Its a tie!")
             break
-
-
-
-
-
-
+            
 
 def user_play():
     while True:
