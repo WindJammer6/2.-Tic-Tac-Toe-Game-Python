@@ -17,6 +17,10 @@ def main():
 
         if user_winner(spots) is True:
             break
+            
+        if full_board() is True:
+            print("Its a tie!")
+            break
 
         y = computer_play()
         spots[int(y)] = ' X '
