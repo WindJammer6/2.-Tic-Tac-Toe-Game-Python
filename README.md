@@ -271,7 +271,8 @@ def full_board():
     return False
 ```
 
-* Too many if loops to check for User Win, Computer Win, should be possible to shorten them
+* Too many if loops to check for User Win, Computer Win, should be possible to shorten them. I have learnt that in coding that you should always try not to
+copy-paste your code and there is usually a way to shorten them e.g. into a loop, etc (based on what I know)
 * Like all code, more features can definitely be added to make the game more interactive like making the AI smart, instead of making random choices on empty spaces on the board, making it easy for user to win.
 
 ## Special Thanks
