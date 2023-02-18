@@ -96,7 +96,7 @@ def user_winner(spots):
         return True
     return False
 ```
-The 'user_winner' function is to check every round if the user has won after user has given an input. There is 8 possible combinations for the user to win. If these 3 keys in the dictionary are filled with an 'O',
+The 'user_winner()' function is to check every round if the user has won after user has given an input. There is 8 possible combinations for the user to win. If these 3 keys in the dictionary are filled with an 'O',
 then the user is declared a winner and returns True, else it returns False.
 
 <br>
@@ -130,7 +130,7 @@ def AI_winner(spots):
     return False
 ```
 
-Similarly, the 'AI_winner' function is to check every round if the AI has won after user has given an input. There is 8 possible combinations for the AI to win. If these 3 keys in the dictionary are filled with an 'X',
+Similarly, the 'AI_winner()' function is to check every round if the AI has won after user has given an input. There is 8 possible combinations for the AI to win. If these 3 keys in the dictionary are filled with an 'X',
 then the AI is declared a winner and returns True, else it returns False.
 
 <br>
@@ -139,7 +139,7 @@ then the AI is declared a winner and returns True, else it returns False.
 def draw_board(spots):
     print(f"{spots[1]},{spots[2]},{spots[3]}\n{spots[4]},{spots[5]},{spots[6]}\n{spots[7]},{spots[8]},{spots[9]}")
 ```
-The draw_board() function basically prints out a visual look of the tic-tac-toe table using the dictionary key-value pairs. This makes it easy to switch the contents in each slot
+The 'draw_board()' function basically prints out a visual look of the tic-tac-toe table using the dictionary key-value pairs. This makes it easy to switch the contents in each slot
 based on the user/AI input and re-print it out visually when updating the board to the user.
 
 <br>
