@@ -206,7 +206,7 @@ Then the code will also check if the board is full. If all the key-value pairs i
 
 These lines of code will keep looping until the user/computer has won, or it is a full board.
 
-##Output
+## Output
 ```python
 Welcome to a game of Tic Tac Toe! (User vs AI)
 
@@ -274,7 +274,7 @@ def full_board():
 * Too many if loops to check for User Win, Computer Win, should be possible to shorten them
 * Like all code, more features can definitely be added to make the game more interactive like making the AI smart, instead of making random choices on empty spaces on the board, making it easy for user to win.
 
-## Special thanks
+## Special Thanks
 Special thanks to harvestingmoon (https://github.com/harvestingmoon), for helping me check for the many bugs and solving them during this project :)
 
 <br>
