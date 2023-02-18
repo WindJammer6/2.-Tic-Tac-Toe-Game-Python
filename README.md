@@ -12,8 +12,8 @@ Computer program used for coding: VS Code
 ## Code description
 Let's start with:
 1. Imported Libraries
-2. Self-defined functions
-3. Defining the dictionary
+2. Defining the dictionary
+3. Self-defined functions
 4. Main code
 
 <br>
@@ -30,7 +30,17 @@ Importing the 'random' library.
 
 <br>
 
-**2. Self-defined functions**
+**2. Defining the dictionary**
+```python
+spots = {1: ' 1 ', 2: ' 2 ', 3: ' 3 ', 4: ' 4 ', 5: ' 5 ', 6: ' 6 ', 7: ' 7 ', 8: ' 8 ', 9: ' 9 '}
+```
+The 'spots' dictionary consists of 9 key value pair, representing a slot in the tic-tac-toe table, which the 'draw_board()' function uses to print out the table visually.
+
+<br>
+
+<br>
+
+**3. Self-defined functions**
 ```python
 def user_play():
     while True:
@@ -146,7 +156,6 @@ based on the user/AI input and re-print it out visually when updating the board 
 
 <br>
 
-**3. Defining the dictionary**
 ```python
 spots = {1: ' 1 ', 2: ' 2 ', 3: ' 3 ', 4: ' 4 ', 5: ' 5 ', 6: ' 6 ', 7: ' 7 ', 8: ' 8 ', 9: ' 9 '}
 ```
