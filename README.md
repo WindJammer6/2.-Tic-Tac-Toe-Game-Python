@@ -1,6 +1,13 @@
 # Tic-Tac-Toe-Game-Python-:x::o:
 A simple game of Tic Tac Toe in Python (User vs AI). Python libraries used: random
 
+<br>
+
+## Special Thanks
+Special thanks to harvestingmoon (https://github.com/harvestingmoon), for helping me check for the many bugs and solving them during this project :)
+
+<br>
+
 ## Thoughts on starting this project
 My second programming project, in Python. My approach to this traditional python project is through dictionaries (key, value relationships), 
 and replacing the numbered values based on the key the user typed in to 'X' and 'O' to indicate that is the spot the player has chosen.
@@ -9,14 +16,14 @@ and replacing the numbered values based on the key the user typed in to 'X' and 
 
 Computer program used for coding: VS Code
 
+<br>
+
 ## Code description
 Let's start with:
 1. Imported Libraries
 2. Defining the dictionary
 3. Self-defined functions
 4. Main code
-
-<br>
 
 <br>
 
@@ -215,6 +222,10 @@ Then the code will also check if the board is full. If all the key-value pairs i
 
 These lines of code will keep looping until the user/computer has won, or it is a full board.
 
+<br>
+
+<br>
+
 ## Output
 ```python
 Welcome to a game of Tic Tac Toe! (User vs AI)
@@ -261,6 +272,10 @@ Choose position: 4
 You won!
 ```
 
+<br>
+
+<br>
+
 ## Thoughts after the project
 This project took me 3 days to complete as I struggled with the loops as I am still grasping the understanding of loops in programming, as well as creating conditions.
 
@@ -283,9 +298,6 @@ def full_board():
 * Too many if loops to check for User Win, Computer Win, should be possible to shorten them. I have learnt that in coding that you should always try not to
 copy-paste your code and there is usually a way to shorten them e.g. into a loop, etc (based on what I know)
 * Like all code, more features can definitely be added to make the game more interactive like making the AI smart, instead of making random choices on empty spaces on the board, making it easy for user to win.
-
-## Special Thanks
-Special thanks to harvestingmoon (https://github.com/harvestingmoon), for helping me check for the many bugs and solving them during this project :)
 
 <br>
 
