@@ -1,5 +1,5 @@
 # Tic-Tac-Toe-Game-Python-:x::o:
-A simple game of Tic Tac Toe in Python (User vs AI). Python libraries used: random
+A simple game of Tic Tac Toe in Python (User vs CPU). Python libraries used: random
 
 <br>
 
@@ -75,9 +75,7 @@ def computer_play():
             print("That position is not available!")
     return n
 ```
-The 'computer_play()' function is to get a random, computer-generated input, from the number 1 to 9 that would be the slots the computer chose to put in, as well as checking if that slot is already filled by either 
-the user or the computer already. If that spot the computer chose already has an 'X' or 'O' as its value, the while loop will prompt the computer for another random input, until a
-desired input is produced.
+The 'computer_play()' function is to get a random, computer-generated input, from the number 1 to 9 that would be the slots the computer chose to put in, as well as checking if that slot is already filled by either the user or the computer already. If that spot the computer chose already has an 'X' or 'O' as its value, the while loop will prompt the computer for another random input, until a desired input is produced.
 
 <br>
 
@@ -119,7 +117,7 @@ then the user is declared a winner and returns True, else it returns False.
 <br>
 
 ```python
-def AI_winner(spots):
+def CPU_winner(spots):
     if spots[1] == ' X ' and spots[2] == ' X ' and spots[3] == ' X ':
         print("You lost!")
         return True 
@@ -147,8 +145,17 @@ def AI_winner(spots):
     return False
 ```
 
-Similarly, the 'AI_winner()' function is to check every round if the AI has won after user has given an input. There is 8 possible combinations for the AI to win. If these 3 keys in the dictionary are filled with an 'X',
-then the AI is declared a winner and returns True, else it returns False.
+Similarly, the 'CPU_winner()' function is to check every round if the CPU has won after user has given an input. There is 8 possible combinations for the CPU to win. If these 3 keys in the dictionary are filled with an 'X', then the CPU is declared a winner and returns True, else it returns False.
+
+<br>
+
+```python
+def full_board():
+    if (spots[1] == (' X ') or spots[1] == (' O ')) and (spots[2] == (' X ') or spots[2] == (' O '))  and (spots[3] == (' X ') or spots[3] == (' O '))  and (spots[4] == (' X ') or spots[4] == (' O '))  and (spots[5] == (' X ') or spots[5] == (' O '))  and (spots[6] == (' X ') or spots[6] == (' O '))  and (spots[7] == (' X ') or spots[7] == (' O '))  and (spots[8] == (' X ') or spots[8] == (' O '))  and (spots[9] == (' X ') or spots[9] == (' O ')) :
+        return True
+    return False
+```
+The 'full_board()' function is to check every round both after the user has made its move and the computer has made its move if the Tic Tac Toe board has become full. If it is, this function will return True, else it returns False. (This number of conditions for the if statement is unnecessarily long... I believe there should be some way to shorten it)
 
 <br>
 
@@ -156,8 +163,7 @@ then the AI is declared a winner and returns True, else it returns False.
 def draw_board(spots):
     print(f"{spots[1]},{spots[2]},{spots[3]}\n{spots[4]},{spots[5]},{spots[6]}\n{spots[7]},{spots[8]},{spots[9]}")
 ```
-The 'draw_board()' function basically prints out a visual look of the tic-tac-toe table using the dictionary key-value pairs. This makes it easy to switch the contents in each slot
-based on the user/AI input and re-print it out visually when updating the board to the user.
+The 'draw_board()' function basically prints out a visual look of the tic-tac-toe table using the dictionary key-value pairs. This makes it easy to switch the contents in each slot based on the user/CPU input and re-print it out visually when updating the board to the user.
 
 <br>
 
@@ -176,7 +182,7 @@ The 'spots' dictionary consists of 9 key value pair, representing a slot in the 
 ```python
 def main(): 
 
-    print('Welcome to a game of Tic Tac Toe! (User vs AI)\n')
+    print('Welcome to a game of Tic Tac Toe! (User vs CPU)\n')
     print('Select a position by typing the corresponding number!')
     draw_board(spots)
 
@@ -199,15 +205,14 @@ def main():
         print(f"Computer chose: {y}")
         draw_board(spots)
 
-        if AI_winner(spots) is True:
+        if CPU_winner(spots) is True:
             break
 
         if full_board() is True:
             print("Its a tie!")
             break
 ```
-'while playing' sets a while loop of the game, where user input is taken (and checked at the same time in the 'user_play()' function), and replace the value of the key (user input) to 'O'
-and then drawing the updated board with the 'O'.
+'while playing' sets a while loop of the game, where user input is taken (and checked at the same time in the 'user_play()' function), and replace the value of the key (user input) to 'O' and then drawing the updated board with the 'O'.
 
 Then the code will check the user win condition. If True, the code will exit the loop and print user win. If False, nothing happens and the code continues.
 
@@ -228,7 +233,7 @@ These lines of code will keep looping until the user/computer has won, or it is 
 
 ## Output
 ```python
-Welcome to a game of Tic Tac Toe! (User vs AI)
+Welcome to a game of Tic Tac Toe! (User vs CPU)
 
 Select a position by typing the corresponding number!
  1 , 2 , 3
@@ -281,23 +286,14 @@ This project took me 3 days to complete as I struggled with the loops as I am st
 
 Furthermore, this expanded my knowledge on dictionaries, and the functionality of key-pair values.
 
-This project also stretched the way on how I think as a programmer, such as being able to visualise the many scenarios that can occur in tic-tac-toe such as full board, and winning combinations, and
-account for them in my code.
+This project also stretched the way on how I think as a programmer, such as being able to visualise the many scenarios that can occur in tic-tac-toe such as full board, and winning combinations, and account for them in my code.
 
 <br>
 
-To be improved:
-* Major flaw, the 'full_board()' function does not work, I have given up solving it at the time as I wanted to move on to new projects.
-```python
-def full_board():
-    if spots[1] == (' X ' or ' O ') and spots[2] == (' X ' or ' O ') and spots[3] == (' X ' or ' O ') and spots[4] == (' X ' or ' O ') and spots[5] == (' X ' or ' O ') and spots[6] == (' X ' or ' O ') and spots[7] == (' X ' or ' O ') and spots[8] == (' X ' or ' O ') and spots[9] == (' X ' or ' O '):
-        return True
-    return False
-```
-
-* Too many if loops to check for User Win, Computer Win, should be possible to shorten them. I have learnt that in coding that you should always try not to
+To be improved:  
+* Too many if loops to check for 'user_winner()', 'CPU_winner()', should be possible to shorten them. I have learnt that in coding that you should always try not to
 copy-paste your code and there is usually a way to shorten them e.g. into a loop, etc (based on what I know)
-* Like all code, more features can definitely be added to make the game more interactive like making the AI smart, instead of making random choices on empty spaces on the board, making it easy for user to win.
+* Like all code, more features can definitely be added to make the game more interactive like making the CPU smart, instead of making random choices on empty spaces on the board, making it easy for user to win.
 
 <br>
 
