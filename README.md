@@ -155,7 +155,7 @@ def full_board():
         return True
     return False
 ```
-The 'full_board()' function is to check every round both after the user has made its move and the computer has made its move if the Tic Tac Toe board has become full. If it is, this function will return True, else it returns False. (This number of conditions for the if statement is unnecessarily long... I believe there should be some way to shorten it)
+The 'full_board()' function is to check every round both after the user has made its move and the computer has made its move if the Tic Tac Toe dictionary board has become full. If it is, this function will return True, else it returns False. (This number of conditions for the if statement is unnecessarily long... I believe there should be some way to shorten it)
 
 <br>
 
