@@ -4,7 +4,7 @@ spots = {1: ' 1 ', 2: ' 2 ', 3: ' 3 ', 4: ' 4 ', 5: ' 5 ', 6: ' 6 ', 7: ' 7 ', 8
 
 def main(): 
 
-    print('Welcome to a game of Tic Tac Toe! (User vs AI)\n')
+    print('Welcome to a game of Tic Tac Toe! (User vs CPU)\n')
     print('Select a position by typing the corresponding number!')
     draw_board(spots)
 
@@ -17,7 +17,7 @@ def main():
 
         if user_winner(spots) is True:
             break
-            
+
         if full_board() is True:
             print("Its a tie!")
             break
@@ -27,19 +27,19 @@ def main():
         print(f"Computer chose: {y}")
         draw_board(spots)
 
-        if AI_winner(spots) is True:
+        if CPU_winner(spots) is True:
             break
 
         if full_board() is True:
             print("Its a tie!")
             break
-            
+
 
 def user_play():
     while True:
         try: 
             n = input("Choose position: ")
-            if spots[int(n)] in [' 1 ', ' 2 ', ' 3 ', ' 4 ',' 5 ', ' 6 ',' 7 ', ' 8 ',' 9 ']:
+            if spots[int(n)] in [' 1 ', ' 2 ', ' 3 ', ' 4 ', ' 5 ', ' 6 ', ' 7 ', ' 8 ', ' 9 ']:
                 break
         except Exception:
             print("That position is not available!")
@@ -50,7 +50,7 @@ def computer_play():
     while True:
         try: 
             n = random.randint(1, 9)
-            if spots[int(n)] in [' 1 ', ' 2 ', ' 3 ', ' 4 ',' 5 ', ' 6 ',' 7 ', ' 8 ',' 9 ']:
+            if spots[int(n)] in [' 1 ', ' 2 ', ' 3 ', ' 4 ', ' 5 ', ' 6 ', ' 7 ', ' 8 ', ' 9 ']:
                 break
         except Exception:
             print("That position is not available!")
@@ -85,7 +85,7 @@ def user_winner(spots):
     return False
 
 
-def AI_winner(spots):
+def CPU_winner(spots):
     if spots[1] == ' X ' and spots[2] == ' X ' and spots[3] == ' X ':
         print("You lost!")
         return True 
@@ -113,7 +113,7 @@ def AI_winner(spots):
     return False
 
 def full_board():
-    if spots[1] == (' X ' or ' O ') and spots[2] == (' X ' or ' O ') and spots[3] == (' X ' or ' O ') and spots[4] == (' X ' or ' O ') and spots[5] == (' X ' or ' O ') and spots[6] == (' X ' or ' O ') and spots[7] == (' X ' or ' O ') and spots[8] == (' X ' or ' O ') and spots[9] == (' X ' or ' O '):
+    if (spots[1] == (' X ') or spots[1] == (' O ')) and (spots[2] == (' X ') or spots[2] == (' O '))  and (spots[3] == (' X ') or spots[3] == (' O '))  and (spots[4] == (' X ') or spots[4] == (' O '))  and (spots[5] == (' X ') or spots[5] == (' O '))  and (spots[6] == (' X ') or spots[6] == (' O '))  and (spots[7] == (' X ') or spots[7] == (' O '))  and (spots[8] == (' X ') or spots[8] == (' O '))  and (spots[9] == (' X ') or spots[9] == (' O ')) :
         return True
     return False
 
