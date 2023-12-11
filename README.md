@@ -4,7 +4,7 @@ A simple game of Tic Tac Toe in Python (User vs CPU). Python libraries used: ran
 <br>
 
 ## Special Thanks
-Special thanks to harvestingmoon (https://github.com/harvestingmoon), for helping me check for the many bugs and solving them during this project :)
+Special thanks to [harvestingmoon](https://github.com/harvestingmoon), for helping me check for the many bugs and solving them during this project :)
 
 <br>
 
